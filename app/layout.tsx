@@ -19,9 +19,9 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Donissima Llaveros Peruanísimos - Llaveros Artesanales del Perú",
+  title: "ArtiLu - Personalized Pet Products Painted by Hand in London",
   description:
-    "Descubre nuestra colección única de llaveros pintados a mano con animales peruanos. Artesanía auténtica que celebra la cultura del Perú.",
+    "Custom keychains, paintings, and Christmas ornaments of your beloved pets, hand-painted in London and protected with resin for lasting memories.",
   generator: "v0.app",
 }
 
@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${montserrat.variable} ${openSans.variable} antialiased`}>
+    <html lang="en" className={`${montserrat.variable} ${openSans.variable} antialiased`}>
       <body className="font-sans">{children}</body>
     </html>
   )
