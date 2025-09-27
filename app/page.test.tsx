@@ -17,7 +17,7 @@ describe('HomePage', () => {
 
     const ornamentCard = within(productsSection).getByText('Christmas Pet Ornament').closest('div.group');
     if (!ornamentCard) {
-      throw new Error("Could not find the 'Christmas Pet Ornament' product card.");
+      throw new "Could not find the 'Christmas Pet Ornament' product card.");
     }
 
     // 2. Add the item to the cart
@@ -30,9 +30,7 @@ describe('HomePage', () => {
     fireEvent.click(cartButton);
 
     // 4. Assert that the total price is correct
-    // The bug is that parseFloat("£1,234.00".replace("£", "")) will result in 1, not 1234.
-    // So the total price will be displayed as £1.00 instead of £1234.00.
-    // This assertion will fail, proving the bug.
+    // With the fix, the total should be correctly calculated and displayed as £1234.00
     expect(screen.queryByText('£1234.00')).toBeInTheDocument();
   });
 });
