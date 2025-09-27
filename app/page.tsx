@@ -40,7 +40,7 @@ export default function HomePage() {
     {
       id: 3,
       name: "Christmas Pet Ornament",
-      price: "£30.00",
+      price: "£1,234.00",
       image: "/painted-pet-ornament.png",
       rating: 5,
       reviews: 28,
@@ -82,7 +82,7 @@ export default function HomePage() {
 
   const getTotalPrice = () => {
     return cart.reduce((total, item) => {
-      const price = Number.parseFloat(item.price.replace("£", ""))
+      const price = Number.parseFloat(item.price.replace("£", "").replace(/,/g, ""))
       return total + price * item.quantity
     }, 0)
   }
