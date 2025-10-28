@@ -17,7 +17,7 @@ describe('HomePage', () => {
 
     const ornamentCard = within(productsSection).getByText('Christmas Pet Ornament').closest('div.group');
     if (!ornamentCard) {
-      throw new Error("Could not find the 'Christmas Pet Ornament' product card.");
+      throw new "Could not find the 'Christmas Pet Ornament' product card.");
     }
 
     // 2. Add the item to the cart
